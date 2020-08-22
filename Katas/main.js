@@ -2,24 +2,118 @@
 // !En caso de ser vocal, devolver "Vocal"
 // !En caso de ser consonante, devolver "Consonante"
 
-/* function evaluateLetter(letra){
-    if(letra==='a'||letra==='e'||letra==='i'||letra==='o'||letra==='u'){
-        console.log('Vocal');
+/* Kata 1: Crea una función llamada farenheitToCelsius() que reciba como parametro los grados farenheit y los convierta a grados centígrados.*/
 
-    }else{
-        console.log('Consonante');
-    }
-    return evaluateLetter;
+
+function farenheitToCelsius( gradosFarenheit){
+    let gradosCentigrados = (gradosFarenheit-32)*(5/9);
+    return gradosCentigrados;
 }
-evaluateLetter('o'); */
+
+/* Kata 2: Crea una función llamada evaluateLetter() que reciba como parámetro cualquier letra del alfabeto y verifique si es vocal o consonante.
+En caso de ser vocal, devolver "Vocal"
+En caso de ser consonante, devolver "Consonante"*/
 
 function evaluateLetter(letra){
     if(letra==='a'||letra==='e'||letra==='i'||letra==='o'||letra==='u'){
-       let letter = 'Vocal';
+       letra = 'Vocal';
     }else{
-        let letter = 'Consonante';
+        letra = 'Consonante';
             }
-    return evaluateLetter;
+    return letra;
 }
-evaluateLetter('e');
-console.log(letter);
+
+// console.log(evaluateLetter('r'));
+
+/*Kata 3: Crea una función llamada decimalToBinary() que reciba como parámetro un número entero decimal y lo convierta en un número binario retornando su resultado.*/
+
+var number = 72;
+
+ function decimalToBinary(number){
+     let binary = "";
+     let temp = number;
+  
+     while(temp > 0){
+         if(temp % 2 == 0){
+             binary = "0" + binary;
+         }
+         else {
+             binary = "1" + binary;
+         }
+ 
+         temp = Math.floor(temp / 2);
+     }
+ 
+     return binary;
+ }
+ 
+//  console.log(decimalToBinary(number));
+
+/*Kata 4: Crea una función llamada evaluateNumber() que reciba como parámetro un número para evaluar si un número es divisible entre 5 y 11 o no lo es.
+En caso de ser divisible entre 5 y 11, retornar true
+En caso de no ser divisible entre 5 y 11, retornar false */
+
+function evaluateNumber(numero){
+
+    if(numero % 5 ==0 && numero % 11 ==0){
+
+        return true;
+    }else{
+        return false;
+    }
+
+}
+// console.log(evaluateNumber(55));
+
+/* Kata Crea una función llamada palindrome() que reciba como parametro una oración, si la oración es un palíndromo la función deberá devolver true en otro caso, devolver false */
+
+function palindrome(texto){
+    // Paso la fraseUser a minusculas y quito espacios
+    texto=texto.toLowerCase().replace(/\s/g,"");
+    /* Creo otra frase partiendo de la de userFrase pero
+    la convierto en array, le doy la vuelta al array, lo paso a string*/
+    fraserReverse=texto.split("").reverse().toString();
+    // Le quito las "," con un remplace dentro del for
+    // Lo igualo a -1 ya que tiene una coma menos que el número total de letras
+    for (var i = 0; i < ((fraserReverse.length)-1); i++) {
+      fraserReverse=fraserReverse.replace(",","");
+    };
+    // Comparo las dos frases.
+    if(texto==fraserReverse){
+      // Si el resultado es positivo
+      return true;
+    }
+    else{
+      // Si el resultado es negativo
+      return false;
+    }
+    // Muestro el el resultado
+  //   document.write("Tu frase "+resultado);
+  }
+  // Llamo a la función comparación con el parámetro del user
+//   console.log(palindrome('Anita lava la tina'));
+
+/* Kata 6: Crea una función llamada longestCountry(), esta función recibirá de parámetro un arreglo con nombres de distintos países, la función deberá retornar el país con mayor número de letras.
+Por ejemplo, del siguiente arreglo de países:
+const paises = ["México", "Panamá", "Guatemala", "El Salvador"]
+El Salvador es el país con mayor número de letras. */
+
+function longestConutry(){
+
+    const paises = ["México", "Panamá", "Guatemala", "El Salvador"];
+
+        let size = paises[i];
+
+
+       for(let i=0;i<size;i++);
+
+
+        console.log(paises);
+
+    //    for(i=0;)
+       
+       return size;
+
+};
+// console.log(longestConutry(paises));
+console.log(longestConutry());
