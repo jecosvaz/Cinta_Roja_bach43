@@ -98,22 +98,13 @@ Por ejemplo, del siguiente arreglo de países:
 const paises = ["México", "Panamá", "Guatemala", "El Salvador"]
 El Salvador es el país con mayor número de letras. */
 
-function longestConutry(){
-
+function longestConutry(size){
+    // se tiene el arreglo
     const paises = ["México", "Panamá", "Guatemala", "El Salvador"];
-
-        let size = paises[i];
-
-
-       for(let i=0;i<size;i++);
-
-
-        console.log(paises);
-
-    //    for(i=0;)
-       
-       return size;
-
-};
-// console.log(longestConutry(paises));
-console.log(longestConutry());
+    // se genera un for para iterar lo que se encuentra dentro del arreglo
+    for (let i=0; i<paises.length; i++){
+            let pais = paises[i];
+            console.log(pais); // se imprime en cosola el pais
+            console.log(pais.length);   // se imprime en cosola el numero de caracteres por pais
+    }
+console.log(longestConutry())
