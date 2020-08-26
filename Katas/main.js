@@ -98,13 +98,32 @@ Por ejemplo, del siguiente arreglo de países:
 const paises = ["México", "Panamá", "Guatemala", "El Salvador"]
 El Salvador es el país con mayor número de letras. */
 
-function longestConutry(size){
+function longestCountry(){
     // se tiene el arreglo
-    const paises = ["México", "Panamá", "Guatemala", "El Salvador"];
+    const paises = ["México", "Panamá", "republica del salvador", "El Salvador"];
     // se genera un for para iterar lo que se encuentra dentro del arreglo
     for (let i=0; i<paises.length; i++){
-            let pais = paises[i];
-            console.log(pais); // se imprime en cosola el pais
-            console.log(pais.length);   // se imprime en cosola el numero de caracteres por pais
+            pais = paises[i];
+            // console.log(`Estos son los paises del arreglo ${pais} y estos la cantidad de caracteres ${pais.length}`); // se imprime en cosola el pais
+            tamanoPais=pais.length;    
+    };
+
+    sizePais =Math.max(pais.length);
+    // console.log(`Este es el pais con el mayor nombre ${sizePais}`);
+       return sizePais;
+        
     }
-console.log(longestConutry())
+// console.log(longestCountry())
+
+//* kata 7: Crea una función llamada time() que calcule el tiempo necesario para que un automóvil que se mueve con una velocidad de 73000 m/h recorra una distancia de 120 km. (Tiempo = distancia/velocidad)
+
+function time(d,v){
+    v= v/1000;
+    let tiempo = (d/v)
+    let horas = tiempo/1
+    console.log(horas) 
+    return tiempo;  
+
+}
+
+console.log(time(120,73000));
